@@ -63,22 +63,31 @@
     <header class="bg-gradient-to-b from-blue-50 via-white to-transparent pt-16 pb-12 px-4 sm:px-6 lg:px-8 text-center border-b border-slate-100">
         <div class="max-w-4xl mx-auto">
             <!-- Badges -->
-            <div class="inline-flex items-center gap-2 bg-blue-100/80 text-blue-800 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 uppercase">
+            <!-- <div class="inline-flex items-center gap-2 bg-blue-100/80 text-blue-800 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wide mb-6 uppercase">
                 <i class="fa-solid fa-microphone-lines mr-1"></i> Spatial Audio AI
-            </div>
+            </div> -->
             
             <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
-                SPUR: A Parameter-Efficient Adapter to Augment LALMs for Spatial Audio Understanding and Reasoning
+                <span class="inline-flex items-center justify-center gap-4 flex-wrap">
+                        <img 
+                            src="spur-logo.png" 
+                            alt="SPUR logo" 
+                            class="h-12 sm:h-16 w-auto inline-block align-middle"
+                        />
+                        <span>
+                            SPUR: A Parameter-Efficient Adapter to Augment LALMs for Spatial Audio Understanding and Reasoning
+                        </span>
+                </span>            
             </h1>
             
-            <p class="text-lg sm:text-xl text-slate-600 font-medium mb-4">
+            <!-- <p class="text-lg sm:text-xl text-slate-600 font-medium mb-4">
                 Anonymous ACL Submission
-            </p>
+            </p> -->
 
             <!-- Links & Badges -->
             <div class="flex flex-wrap justify-center gap-3 mt-6 mb-8">
-                <a href="#" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-200 shadow-sm shadow-slate-900/10">
-                    <i class="fa-solid fa-file-pdf text-red-400"></i> Read Paper (PDF)
+                <a href="https://arxiv.org/abs/2511.06606" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-200 shadow-sm shadow-slate-900/10">
+                    <i class="fa-solid fa-file-pdf text-red-400"></i> Paper (arXiv)
                 </a>
                 <a href="#" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-sm">
                     <i class="fa-brands fa-github text-slate-900"></i> Code (Coming Soon)
@@ -126,7 +135,7 @@
                 </div>
                 <div class="mt-6 pt-4 border-t border-blue-100/60 flex items-center justify-between text-xs text-slate-500">
                     <span><i class="fa-solid fa-bolt mr-1 text-yellow-500"></i> Built on top of SOTA LALMs</span>
-                    <span>ACL Submission</span>
+                    <!-- <span>ACL Submission</span> -->
                 </div>
             </div>
         </section>
@@ -235,7 +244,7 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio (FOA Format)</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                                    <source src="audios/spsi.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                                 <span class="block text-[11px] text-slate-400 mt-2 italic"><i class="fa-solid fa-circle-exclamation mr-1 text-amber-500"></i> Note: This is a placeholder stereo render. Real SPUR processes full 4-channel FOA [134].</span>
@@ -317,14 +326,14 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                                    <source src="audios/pbdm.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="border border-slate-100 rounded-2xl p-4 bg-brand-50/30">
                                 <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Scene Description</h4>
                                 <p class="text-slate-600 text-xs leading-relaxed">
-                                    A water tap dripping nearby. Suddenly a knock is heard from the far back door, overlapping with the sound of running water.
+                                    A door opening/closing too close in front. Laughter from front-right overlaps with a man speaking back-left. Clapping is heard right. Later, knocking from the front mixes with a water tap too close on the left. The audio concludes with a final knock from back-left and a door closing too close from back-right.
                                 </p>
                             </div>
                         </div>
@@ -386,14 +395,14 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                                    <source src="audios/dcr.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="border border-slate-100 rounded-2xl p-4 bg-brand-50/30">
                                 <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Scene Description</h4>
                                 <p class="text-slate-600 text-xs leading-relaxed">
-                                    Keyboard typing noise in the foreground, faint music on the right, and a clear speaking voice originating from the back-left.
+                                    A man's voice is heard close from the back-left and slightly below. Throughout his speech, distinct keyboard typing sounds are present, along with some crinkling or crunching noises, creating a busy indoor ambience.
                                 </p>
                             </div>
                         </div>
@@ -455,9 +464,15 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+                                    <source src="audios/gdsc.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
+                            </div>
+                            <div class="border border-slate-100 rounded-2xl p-4 bg-brand-50/30">
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Scene Description</h4>
+                                <p class="text-slate-600 text-xs leading-relaxed">
+                                    The scene features many too-close sounds. A musical instrument plays back. A telephone front-left. A door operates, and a knock right. Later, a man speaks front-left, overlapping with clapping. Domestic sounds back-left coincide with further clapping.
+                                </p>
                             </div>
                         </div>
                         <div class="lg:col-span-7 space-y-6">
@@ -508,9 +523,15 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
+                                    <source src="audios/ean.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
+                            </div>
+                            <div class="border border-slate-100 rounded-2xl p-4 bg-brand-50/30">
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Scene Description</h4>
+                                <p class="text-slate-600 text-xs leading-relaxed">
+                                    A series of soft knocks begins from behind and slightly above, gradually moving across the back. Shortly after, gentle musical notes emerge from a person positioned behind and slightly below. Around the same time, footsteps approach from the front-left, overlapping with the music. Later, a woman’s voice is heard from the back-left, followed by laughter from someone positioned behind and slightly above. The scene feels like a casual, intimate gathering with subtle overlapping sounds.
+                                </p>
                             </div>
                         </div>
                         <div class="lg:col-span-7 space-y-6">
@@ -561,9 +582,15 @@
                             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4">
                                 <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Listen to Input Audio</label>
                                 <audio controls class="w-full">
-                                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg">
+                                    <source src="audios/scene_config.wav" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
+                            </div>
+                            <div class="border border-slate-100 rounded-2xl p-4 bg-brand-50/30">
+                                <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Scene Description</h4>
+                                <p class="text-slate-600 text-xs leading-relaxed">
+                                    A woman's voice speaks from not too far in the front-right. Intermittently, drawers open and close, one from not too far in the back-left and another from not too far in the front-right. A printer is also heard too close directly in front, creating a busy office-like environment.
+                                </p>
                             </div>
                         </div>
                         <div class="lg:col-span-7 space-y-6">
@@ -804,8 +831,8 @@
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-center md:text-left">
             <div>
-                <p class="font-semibold text-white mb-1">SPUR: Spatial Audio AI Project</p>
-                <p>&copy; 2026 Anonymous ACL Submission. All rights reserved.</p>
+                <p class="font-semibold text-white mb-1">SPUR: Spatial Audio Understanding and Reasoning</p>
+                <p>&copy; 2026 All rights reserved.</p>
             </div>
             <div class="flex gap-4">
                 <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
@@ -849,11 +876,11 @@
         }
 
         function copyCitation() {
-            const citationText = `@article{spur2026,
-  title={SPUR: A Parameter-Efficient Adapter to Augment LALMs for Spatial Audio Understanding and Reasoning},
-  author={Anonymous},
-  journal={arXiv preprint},
-  year={2026}
+            const citationText = `@article{sakshi2025spur,
+  title={SPUR: A Plug-and-Play Framework for Integrating Spatial Audio Understanding and Reasoning into Large Audio-Language Models},
+  author={Sakshi, S and Lokegaonkar, Vaibhavi and Zhang, Neil and Duraiswami, Ramani and Ghosh, Sreyan and Manocha, Dinesh and Lu, Lie},
+  journal={arXiv preprint arXiv:2511.06606},
+  year={2025}
 }`;
             navigator.clipboard.writeText(citationText).then(() => {
                 alert('Citation copied to clipboard!');
